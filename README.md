@@ -3,10 +3,11 @@
 rmail is a CLI utility for sending emails over SMTP and reading emails over IMAP (and soon POP3).
 
 # Installation
-
+- Make sure you have the latest of rust (see [rustup](https://rustup.rs/))
+- Run cargo build
 
 # Configuration
-Configuration instructions for popular email clients are provided below:
+Configuration instructions for several email clients are provided below:
 - **Gmail**
     - [SMTP](https://support.google.com/mail/answer/7126229?hl=en#zippy=%2Cstep-change-smtp-other-settings-in-your-email-client%2Cstep-check-that-imap-is-turned-on)
     - [IMAP](https://support.google.com/mail/answer/7126229?hl=en#zippy=%2Cstep-change-smtp-other-settings-in-your-email-client%2Cstep-check-that-imap-is-turned-on%2Ci-cant-sign-in-to-my-email-client)
@@ -48,7 +49,7 @@ Options:
 > **Note**
 > You can use the --help flag on any subcommand to see a more detailed explanation of that command.
 
-You can also specify several configuration values as environment variables. These values are `SERVER`, `PORT`, `USERNAME`, and `PASSWORD` and are not needed as CLI flags when set. In the case that both are provided, the environment variables will take precedence.
+You can specify several configuration values as environment variables. These values are `SERVER`, `PORT`, `USERNAME`, and `PASSWORD` and are not needed as CLI flags when set. In the case that both are provided, the environment variables will take precedence.
 
 # Develop
 - Make sure you have the latest of rust (see [rustup](https://rustup.rs/))

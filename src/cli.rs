@@ -23,19 +23,19 @@ impl Cli {
 
         match args.clone().commands {
             Some(Command::Send(mut send_args)) => {
-                if send_args.server == None {
+                if send_args.server.is_none() {
                     send_args.server = Some(env::var("SERVER").unwrap());
                 }
 
-                if send_args.port == None {
+                if send_args.port.is_none() {
                     send_args.port = Some(env::var("PORT").unwrap().parse().unwrap());
                 }
 
-                if send_args.username == None {
+                if send_args.username.is_none() {
                     send_args.username = Some(env::var("USERNAME").unwrap());
                 }
 
-                if send_args.password == None {
+                if send_args.password.is_none() {
                     send_args.password = Some(env::var("PASSWORD").unwrap());
                 };
 
@@ -45,19 +45,19 @@ impl Cli {
             }
 
             Some(Command::Read(mut read_args)) => {
-                if read_args.server == None {
+                if read_args.server.is_none() {
                     read_args.server = Some(env::var("SERVER").unwrap());
                 }
 
-                if read_args.port == None {
+                if read_args.port.is_none() {
                     read_args.port = Some(env::var("PORT").unwrap().parse().unwrap());
                 }
 
-                if read_args.username == None {
+                if read_args.username.is_none() {
                     read_args.username = Some(env::var("USERNAME").unwrap());
                 }
 
-                if read_args.password == None {
+                if read_args.password.is_none() {
                     read_args.password = Some(env::var("PASSWORD").unwrap());
                 }
 
@@ -149,11 +149,11 @@ pub struct ReadArgs {
     #[arg(short, long)]
     pub mailbox: String,
 
-    /// The number of emails to fetch (default: 100)
+    /// The number of emails to fetch
     #[arg(short, long, default_value = "100")]
     pub count: Option<u32>,
 
-    /// The file path to output the emails to (default: stdout)
+    /// The file path to output the emails to [default: stdout]
     #[arg(short, long)]
     pub output: Option<String>,
 }
