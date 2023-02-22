@@ -19,6 +19,7 @@ pub fn read_mail<T: Write + Read>(
 
     let m = session.fetch(format!("1:{count}"), "RFC822")?;
 
+    // If the output flag was speficied...
     if let Some(out) = output {
         let mut file = std::fs::File::create(out).expect("Failed to create file");
 

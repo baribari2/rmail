@@ -15,6 +15,7 @@ fn main() -> anyhow::Result<()> {
     let args = cli::Cli::new().parse_all();
 
     match args.commands {
+        // Send command
         Some(cli::Command::Send(send_args)) => {
             let mut spinner = Spinner::new(Spinners::Dots9, "📧 Sending email... ".to_string());
 
@@ -43,6 +44,7 @@ fn main() -> anyhow::Result<()> {
             spinner.stop();
         }
 
+        // Read command
         Some(cli::Command::Read(read_args)) => {
             let mut spinner = Spinner::new(Spinners::Dots9, "📧 Fetching emails...".to_string());
             let imap_client = {
