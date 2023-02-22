@@ -149,11 +149,11 @@ pub struct ReadArgs {
     #[arg(short, long)]
     pub mailbox: String,
 
-    /// The number of emails to fetch (default: 100)
+    /// The number of emails to fetch
     #[arg(short, long, default_value = "100")]
     pub count: Option<u32>,
 
-    /// The file path to output the emails to (default: stdout)
+    /// The file path to output the emails to [default: stdout]
     #[arg(short, long)]
     pub output: Option<String>,
 }

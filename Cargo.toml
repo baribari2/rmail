@@ -13,8 +13,8 @@ repository="github.com/baribari2/rmail"
 clap = { version = "4.1.6", features = ["derive"] }
 imap = { version = "2.4.1", features = ["native-tls"] }
 native-tls = "0.2"
-tokio = { version = "1", features = ["full"] }
 lettre = "0.10"
 anyhow = "1.0.69"
 spinners = "4.1.0"
-mail-parser = "0.8.1"
+mailparse = "0.14.0"
+crossterm = "0.26.0"
