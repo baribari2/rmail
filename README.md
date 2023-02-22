@@ -62,5 +62,5 @@ You can specify several configuration values as environment variables. These val
 - [RFC5037 (POP3)](https://datatracker.ietf.org/doc/html/rfc5034)
 
 # Coming Soon
-- [ ] Prettier output
+- [x] Prettier output
 - [ ] POP3 Support
